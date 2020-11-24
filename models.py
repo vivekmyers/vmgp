@@ -117,7 +117,6 @@ class VariationalModel(gpytorch.models.ExactGP):
         self.train_inputs = None
         self.train_targets = None
 
-"""## VMGP"""
 
 class VariationalMetaGP(nn.Module):
     '''Variational GP meta-learner with deep non-Gaussian likelihood.
@@ -193,8 +192,6 @@ class VariationalMetaGP(nn.Module):
         
         return torch.stack(Y_pred_all).detach()
 
-"""## MGP"""
-
 class MetaGP(nn.Module):
     '''Baseline non-variational GP meta-learner.
     deep_kernel_dim: (optional int): if set, use a deep kernel for the 
@@ -245,8 +242,6 @@ class MetaGP(nn.Module):
         Y_pred = self.likelihood(self.gp(X_test)).sample(sample_shape=torch.Size([samples]))
         self.gp.clear()
         return Y_pred.detach()
-
-"""## Baseline Models"""
 
 class FunctionalMLP(nn.Module):
     '''Simple multilayer perceptron, allowing functional passing of parameters.'''
@@ -316,7 +311,6 @@ class EMAML(nn.Module):
         Y_pred = torch.stack(preds)
         return Y_pred.detach()
 
-
 class MAML(nn.Module):
     '''Implementation of MAML'''
     def __init__(self, input_dim, hidden_units, hidden_layers, inner_lr):
@@ -344,7 +338,6 @@ class MAML(nn.Module):
         init_weights = [x for x in self.net.parameters()]
         Y_pred = self.inner_loop(init_weights, X_train, Y_train, X_test)
         return Y_pred
-
 
 class Alpaca(MetaGP):
     '''Implementation of Alpaca algorithm, viewed as Bayesian linear regression.'''
