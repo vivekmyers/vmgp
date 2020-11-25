@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import tqdm.notebook as tqdm
 from config import *
+from device import device
 sns.set_style('darkgrid')
 
 

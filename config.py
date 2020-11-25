@@ -2,8 +2,6 @@ import torch
 from models import *
 from environments import *
 
-device = torch.device('cuda:0')
-
 train_size = None
 K = 5
 query_size = 5
