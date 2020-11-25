@@ -15,4 +15,4 @@ model its uncertainty, outperforming the other, less expressive methods.
 ![prediction examples](predictions.png)
 
 Above: Sinusoid Regression Examples. Columns, from left: EMAML, AlPaCA, DKT, VMGP (ours). Each row shows an example test
-task from a different variant of the sinusoid environment. Rows, from top: Standard, High Frequency, Out of Range, Tangent.
+task from a different variant of the regression environment. Rows, from top: standard sinusoids, high frequency sinusoids, out of range testing, and tangent functions.
