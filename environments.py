@@ -111,9 +111,11 @@ class SinusoidTaskGenerator(nn.Module):
         Returns:
         X: datapoints of shape (batch, support_size+query_size), sampled uniformly from 
             self.train_samp_range/self.test_samp_range
-        Y: Labels for these datapoints of X, aka Y[i][j] = A_i*np.sin(X[i][j] + C_i) for all (i, j).
-            A_i is the amplitude for the i-th task, sampled uniformly from self.amplitude_range
-            C_i is the phase for the i-th task, sampled uniformly from self.phase_range
+        Y: Labels for the datapoints in X. Each element Y[i][j] = A[i]*np.sin(B[i]*X[i][j] + C[i]) + eps[i] for all (i, j).
+            A[i] is the amplitude for the i-th task, sampled uniformly from self.amplitude_range
+            B[i] is the frequency for the i-th task, sampled uniformly from self.freq_range
+            C[i] is the phase for the i-th task, sampled uniformly from self.phase_range
+            eps[i] is for the i-th task, sampled from Normal(0, (0.01*A[i])^2)
         '''
         amp = torch.empty(batch).uniform_(*self.amp_range)
         phase = torch.empty(batch).uniform_(*self.phase_range)
