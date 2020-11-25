@@ -7,3 +7,12 @@ Full paper: TBD
 
 ![summary of results](method-comparison.png)
 
+Above:  Predictions (bottom row) and posterior predictive distribution densities (for the single red testing point, top row)
+from each model on a 5·floor(z) latent function task. VMGP is able to predict a multimodal mixture of point distributions to
+model its uncertainty, outperforming the other, less expressive methods.
+
+
+![prediction examples](predictions.png)
+
+Above: Sinusoid Regression Examples. Columns, from left: EMAML, AlPaCA, DKT, VMGP (ours). Each row shows an example test
+task from a different variant of the sinusoid environment. Rows, from top: Standard, High Frequency, Out of Range, Tangent.
