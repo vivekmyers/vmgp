@@ -7,6 +7,7 @@ K = 5
 query_size = 5
 
 data_generator = FunctionTaskGenerator(input_dim=1, transform=atan_transform).to(device)
+input_dim = data_generator.input_dim
 
 batch = 50
 val_interval = 1000

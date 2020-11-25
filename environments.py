@@ -6,7 +6,7 @@ import numpy as np
 import random
 import matplotlib.pyplot as plt
 import seaborn as sns
-import tqdm.notebook as tqdm
+import tqdm
 from device import device
 sns.set_style('darkgrid')
 
