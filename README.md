@@ -1,7 +1,7 @@
 # vmgp
 This is the repository of Vivek Myers and Nikhil Sardana for our [CS 330](https://cs330.stanford.edu/) final project, *Bayesian Meta-Learning Through Variational Gaussian Processes.*
 
-Full paper: https://arxiv.org/abs/2110.11044
+Paper: https://arxiv.org/abs/2110.11044
 
 ![summary of results](method-comparison.png)
 
